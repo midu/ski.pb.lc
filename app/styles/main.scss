@@ -1,0 +1,51 @@
+@import "compass_twitter_bootstrap";
+
+html, body {
+  width: 100%; height: 100%;
+  overflow: hidden
+}
+
+#countdown, h1 {
+  text-align: center;
+}
+
+.fullBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+}
+
+#bg-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: transparent;
+  width: 50%;
+}
+
+h1 {
+  font-size: 1.5em;
+  line-height: 1.1em;
+}
+
+#kikou {
+  padding: 5px;
+  border-radius: 5px;
+  background: #ccc;
+}
+
+body {
+  background-image: url(http://i.pb.lc/image/1Q3s373M380X/Screen%20shot%202012-09-25%20at%206.21.45%20PM.png);
+  background-size: cover;
+}
