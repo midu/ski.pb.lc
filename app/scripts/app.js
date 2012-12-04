@@ -9,6 +9,12 @@ window.requestAnimFrame = (function(){
           };
 })();
 
+window.displayWeather = function (json) {
+  var data = json.value.items[0];
+
+  console.log('kikou', data);
+};
+
 $(function () {
   var $countdown = $('#countdown');
   var until = new Date(2013, 2, 2, 8, 25);
@@ -23,4 +29,7 @@ $(function () {
     requestAnimFrame(loop);
     update();
   })();
+
+
 });
+
