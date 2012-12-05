@@ -1,3 +1,17 @@
+var setForecast = function (forecasts) {
+  var source   = $("#forecast-template-bitch").html();
+  var template = Handlebars.compile(source);
+
+  $('#forecast-placeholder').html(template({forecasts: forecasts}));
+};
+
+var setSnowReport = function (report) {
+  var source = $('#snow-template-bitch').html();
+  var template = Handlebars.compile(source);
+
+  $('#snow-report-placeholder').html(template(report));
+};
+
 window.requestAnimFrame = (function(){
   return  window.requestAnimationFrame       ||
           window.webkitRequestAnimationFrame ||
@@ -13,6 +27,9 @@ window.displayWeather = function (json) {
   var data = json.value.items[0];
 
   console.log('kikou', data);
+
+  setForecast(data.forecast);
+  setSnowReport(data.snow_report);
 };
 
 $(function () {

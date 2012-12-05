@@ -31,6 +31,8 @@ frameborder="0" allowfullscreen></iframe>
   </div>
 
   <div id="reports">
+    <section id="forecast-placeholder"></section>
+    <section id="snow-report-placeholder"></section>
     <a href="http://www.onthesnow.com/colorado/vail/ski-resort.html">Ski report</a>
     <a href="http://snocountry.com/resort-page/co/vail/vail-mtn-stats">Mountain stats</a>
   </div>
@@ -39,7 +41,40 @@ frameborder="0" allowfullscreen></iframe>
   <script>window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\/script>')</script>
 
 
+  <script id="forecast-template-bitch" type="text/x-handlebars-template">
+    <div id="weather-motherfucker">
+      <ul id="forecast">
+      {{#each forecasts}}
+        <li>
+          <h3 class="forecast-date">{{date}}</h3>
+          <p class="forecast-day">
+            {{day.weather_text}} {{day_max_temp}}ºC
+          </p>
+          <p class="forecast-night">
+            {{night.weather_text}} {{night_min_temp}}ºC
+          </p>
+        </li>
+      {{/each}}
+      </ul>
+    </div>
+  </script>
+
+  <script id="snow-template-bitch" type="text/x-handlebars-template">
+    <div id="snow-motherfucker">
+      <p>
+        {{conditions}}
+      </p>
+      <p>
+        It last snowed on {{last_snow_date}}
+      </p>
+      <p>
+        The snow depth: {{lower_snow_depth}}-{{upper_snow_depth}}cm
+      </p>
+    </div>
+  </script>
+
   <!-- build:js scripts/application.js -->
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.rc.1/handlebars.min.js"></script>
   <script type="text/javascript" src="scripts/vendor/countdownjs.js"></script>
   <script type="text/javascript" src="scripts/app.js"></script>
   <!-- endbuild -->
