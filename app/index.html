@@ -12,7 +12,10 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <link rel="stylesheet" href="styles/main.css"/>
+    <!-- build:css styles/main.css -->
+      <link rel="stylesheet" href="styles/main.css"/>
+      <link rel="stylesheet" href="styles/forecasts.css"/>
+    <!-- endbuild -->
   </head>
   <body>
 
@@ -22,36 +25,41 @@
 
       <p id="countdown"></p>
     </div>
-  </div>
 
-  <div id="youtube">
-    <iframe id="ytplayer" type="text/html" width="640" height="360"
-src="https://www.youtube.com/embed/dPd71pKOeC4?autoplay=1&controls=0&enablejsapi=1&fs=1&modestbranding=1&rel=0&showinfo=0&autohide=1&color=white&iv_load_policy=3&theme=light"
-frameborder="0" allowfullscreen></iframe>
-  </div>
+    <div id="photo">
+      <img src="http://i.pb.lc/image/1Q3s373M380X/Screen%20shot%202012-09-25%20at%206.21.45%20PM.png" alt="motherfuckers">
+    </div>
 
-  <div id="reports">
-    <section id="forecast-placeholder"></section>
-    <section id="snow-report-placeholder"></section>
-    <a href="http://www.onthesnow.com/colorado/vail/ski-resort.html">Ski report</a>
-    <a href="http://snocountry.com/resort-page/co/vail/vail-mtn-stats">Mountain stats</a>
+    <div id="reports">
+      <section class="report" id="snow-report-placeholder"></section>
+      <section class="report" id="forecast-placeholder"></section>
+    </div>
+
+    <div id="youtube">
+      <iframe id="ytplayer" type="text/html" width="640" height="360"
+  src="https://www.youtube.com/embed/dPd71pKOeC4?&amp;controls=1&amp;enablejsapi=1&amp;fs=1&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;autohide=1&amp;color=white&amp;iv_load_policy=3&amp;theme=light"
+  frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <p id="ma-bite">
+      et là ma bite, elle s'était mise... EN SA-PIIIIIIIN!
+    </p>
   </div>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\/script>')</script>
 
-
   <script id="forecast-template-bitch" type="text/x-handlebars-template">
     <div id="weather-motherfucker">
-      <ul id="forecast">
+      <ul id="forecast" class="clearfix">
       {{#each forecasts}}
         <li>
           <h3 class="forecast-date">{{date}}</h3>
-          <p class="forecast-day">
-            {{day.weather_text}} {{day_max_temp}}ºC
+          <p class="forecast-temps">
+             {{day_max_temp}}/{{night_min_temp}}ºC
           </p>
-          <p class="forecast-night">
-            {{night.weather_text}} {{night_min_temp}}ºC
+          <p class="forecast-text">
+            {{day.weather_text}}<br> {{night.weather_text}}
           </p>
         </li>
       {{/each}}
@@ -62,13 +70,11 @@ frameborder="0" allowfullscreen></iframe>
   <script id="snow-template-bitch" type="text/x-handlebars-template">
     <div id="snow-motherfucker">
       <p>
-        {{conditions}}
-      </p>
-      <p>
-        It last snowed on {{last_snow_date}}
-      </p>
-      <p>
-        The snow depth: {{lower_snow_depth}}-{{upper_snow_depth}}cm
+        <strong>{{lower_snow_depth}}-{{upper_snow_depth}}cm</strong><br>
+        snow depth<br>
+        <em>
+         It last snowed on {{last_snow_date}}
+        </em>
       </p>
     </div>
   </script>
