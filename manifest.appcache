@@ -1,7 +1,7 @@
 # kikou [object Object] (undefined, #undefined)
 CACHE MANIFEST
 
-# Time: Wed Dec 05 2012 15:58:03 GMT-0500 (EST)
+# Time: Wed Dec 05 2012 16:03:30 GMT-0500 (EST)
 # This manifest was created by confess.js, http://github.com/jamesgpearce/confess
 #
 # Retrieved URL: http://localhost:3501/
@@ -29,7 +29,7 @@ http://localhost:3501/img/glyphicons-halflings-white.png
 http://localhost:3501/img/glyphicons-halflings.png
 http://pipes.yahoo.com/pipes/pipe.run?_id=ddf68130a81e666b698448803feeaf87&_render=json&_callback=displayWeather
 scripts/373c3b88.application.js
-styles/ce1d4b9d.main.css
+styles/3e51ff6a.main.css
 
 NETWORK:
 *
