@@ -1,7 +1,7 @@
 # kikou [object Object] (undefined, #undefined)
 CACHE MANIFEST
 
-# Time: Wed Dec 05 2012 16:03:30 GMT-0500 (EST)
+# Time: Mon Dec 10 2012 10:20:39 GMT-0500 (EST)
 # This manifest was created by confess.js, http://github.com/jamesgpearce/confess
 #
 # Retrieved URL: http://localhost:3501/
@@ -25,11 +25,9 @@ CACHE:
 http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js
 http://i.pb.lc/image/1Q3s373M380X/Screen%20shot%202012-09-25%20at%206.21.45%20PM.png
 http://i.pb.lc/image/321F2A0b202V/39375685.gif
-http://localhost:3501/img/glyphicons-halflings-white.png
-http://localhost:3501/img/glyphicons-halflings.png
 http://pipes.yahoo.com/pipes/pipe.run?_id=ddf68130a81e666b698448803feeaf87&_render=json&_callback=displayWeather
 scripts/373c3b88.application.js
-styles/3e51ff6a.main.css
+styles/ced439d5.main.css
 
 NETWORK:
 *
