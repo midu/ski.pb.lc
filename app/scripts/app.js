@@ -26,15 +26,13 @@ window.requestAnimFrame = (function(){
 window.displayWeather = function (json) {
   var data = json.value.items[0];
 
-  console.log('kikou', data);
-
   setForecast(data.forecast);
   setSnowReport(data.snow_report);
 };
 
 $(function () {
   var $countdown = $('#countdown');
-  var until = new Date(2013, 2, 2, 8, 25);
+  var until = new Date(2013, 1, 2, 8, 25);
   var timespan = null;
 
   var update = function () {
